@@ -1,0 +1,49 @@
+{
+  "ts-node": {
+    // Do not forget to `npm i -D tsconfig-paths`
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "lib": [
+      "es6"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./build",
+    "sourceMap": true,
+    "paths": {
+      "@src/controllers": [
+        "./src/controllers"
+      ],
+      "@src/db": [
+        "./src/db"
+      ],
+      "@src/errors": [
+        "./src/errors"
+      ],
+      "@src/middlewares": [
+        "./src/middlewares"
+      ],
+      "@src/models": [
+        "./src/models"
+      ],
+      "@src/routes": [
+        "./src/routes"
+      ],
+      "@src/utils": [
+        "./src/utils"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
